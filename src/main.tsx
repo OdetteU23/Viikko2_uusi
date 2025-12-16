@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
 import ReactDOM from "react-dom/client";
-// import App from "./App"; // Removed because './App' does not exist
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 

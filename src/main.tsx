@@ -42,7 +42,7 @@ function ThreeSceneApp() {
     pmremGenerator.compileEquirectangularShader();
 
     // Environment map loader
-    new RGBELoader().load('textures/river_alcove.hdr', (texture) => {
+    new RGBELoader().load(`${import.meta.env.BASE_URL}textures/river_alcove.hdr`, (texture) => {
       const envMap = pmremGenerator.fromEquirectangular(texture).texture;
       scene.environment = envMap;
       scene.background = envMap; 
@@ -54,7 +54,7 @@ function ThreeSceneApp() {
     
     // Load Wolf model 
     loader.load(
-      'models/wolf/Wolf-Blender-2.82a.glb',
+      `${import.meta.env.BASE_URL}models/wolf/Wolf-Blender-2.82a.glb`,
       (gltf) => {
         const wolf = gltf.scene;
         wolf.position.set(0, 0, 0);
@@ -72,7 +72,7 @@ function ThreeSceneApp() {
 
     // the DamagedHelmet model which includes comprehensive PBR texturing
     loader.load(
-      'models/DamagedHelmet.gltf',
+      `${import.meta.env.BASE_URL}models/DamagedHelmet.gltf`,
       (gltf) => {
         const helmet = gltf.scene;
         helmet.position.set(2, 0, 0);
